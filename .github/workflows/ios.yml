@@ -41,7 +41,7 @@ jobs:
         
       - name: Build Archive
         run: |
-          xcodebuild -workspace 'ios/ArtApp.xcworkspace' -scheme 'ArtApp' -configuration 'Release' \
-          clean archive archive -UseModernBuildSystem=NO -archivePath 'build/ArtApp.xcarchive' \
+          xcodebuild -workspace 'ios/ArtApp.xcworkspace' -scheme 'ArtApp' clean archive -configuration 'Release' \
+          -UseModernBuildSystem=NO -archivePath 'build/ArtApp.xcarchive' \
           CODE_SIGNING_ALLOWED=NO"
         
