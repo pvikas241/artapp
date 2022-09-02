@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build and analyse default scheme using xcodebuild command
+    name: IOS Build
     runs-on: macos-latest
 
     steps:
@@ -41,7 +41,7 @@ jobs:
         
       - name: Build Archive
         run: |
-          xcodebuild -workspace $WORKPLACE -scheme $SCHEME -configuration $CONFIGURATION \
-          archive -archivePath $ARCHIVE_PATH -allowProvisioningUpdates
+          xcodebuild -workspace 'ios/ArtApp.xcworkspace' -scheme 'myapp' -configuration 'Release' \
+          archive -archivePath 'build/ArtApp.xcarchive' -allowProvisioningUpdates
           PROVISIONING_STYLE="Automatic" \
         
