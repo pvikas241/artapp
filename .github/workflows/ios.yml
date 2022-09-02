@@ -41,7 +41,7 @@ jobs:
         
       - name: Build Archive
         run: |
-          xcodebuild -workspace 'ios/ArtApp.xcworkspace' -scheme 'myapp' -configuration 'Release' \
+          xcodebuild -workspace 'ios/ArtApp.xcworkspace' -scheme 'ArtApp' -configuration 'Release' \
           archive -archivePath 'build/ArtApp.xcarchive' -allowProvisioningUpdates
           PROVISIONING_STYLE="Automatic" \
         
